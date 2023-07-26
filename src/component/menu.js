@@ -143,7 +143,7 @@ async function getAllMenus() {
 async function updateMenu(menuId, updateData) {
   try {
     const token = localStorage.getItem("token");
-    const response = await fetch(`https://abrar-be.vercel.app/${menuId}`, {
+    const response = await fetch(`https://abrar-be.vercel.app/menu/${menuId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -163,7 +163,7 @@ async function updateMenu(menuId, updateData) {
 async function deleteMenu(menuId) {
   try {
     const token = localStorage.getItem("token");
-    const response = await fetch(`https://abrar-be.vercel.app/${menuId}`, {
+    const response = await fetch(`https://abrar-be.vercel.app/menu/${menuId}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,
